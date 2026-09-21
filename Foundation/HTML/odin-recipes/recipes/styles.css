@@ -1,0 +1,16 @@
+.recipe{
+    width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.center-image{
+    width: 400px;
+    height:auto;
+}
+
+.steps{
+    border: 5px dashed black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
