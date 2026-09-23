@@ -1,5 +1,9 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
 }
 
 img {
@@ -7,9 +11,26 @@ img {
   height: 100px;
 }
 
+
 .title {
+  align-self: center;
   font-size: 36px;
   font-weight: 900;
+}
+
+.card-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flower-card{
+  text-align: center;
+  width:200px; 
+}
+
+.text{
+  flex-wrap: wrap;
 }
 
 /* do not edit this footer */
