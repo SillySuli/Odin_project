@@ -16,11 +16,15 @@ body {
 }
 
 .modal {
+  display:flex;
   background: white;
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  padding: 20px;
+  gap:10px;
 }
+
 
 .icon {
   color: royalblue;
@@ -33,6 +37,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink:0;
 }
 
 .close-button {
