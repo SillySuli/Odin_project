@@ -1,0 +1,139 @@
+body, .quote-container, .gray-container , .card-container, .image-placeholder, .plain-container, .navy-container, .info-container, .nav-bar, ul, .footer{
+    display:flex;
+}
+
+body{
+    margin: 0 8px;
+    min-height: 100vh;
+    flex-direction:column;
+    font-family:  Roboto, Arial, sans-serif;
+}
+
+.main{
+    flex: 1 0 auto;
+}
+
+.nav-bar, .hero-container, .plain-container, .gray-container{
+    margin: 0 48px;
+}
+
+.nav-bar{
+    align-items: center;
+    justify-content:space-between; 
+}
+
+
+.navy-container{
+    background-color: #1F2937;
+    flex-direction: column;
+}
+
+.hero-container{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap:24px;
+    padding: 48px 0;
+}
+
+.info-container{
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.image-placeholder{
+    background-color: gray;
+    color: #F9FAF8;
+    justify-content:center;
+    align-items: center;
+    flex: 1;
+}
+
+.plain-container{
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container{
+    gap: 30px;
+}
+
+.gray-container{
+    background-color: #E5E7EB;
+}
+
+.quote-container{
+    flex-direction:column;
+}
+.card{
+    color: #e5e7eb;
+    width: 156px;
+}
+
+.square{
+    border: 3px solid #3882F6;
+    height: 150px;
+    width: 150px;
+    border-radius: 0.5rem;
+}
+
+a{
+    color: #e5e7eb;
+}
+
+
+.Logo{
+    font-size: 24px;
+    color: #F9FAF8;
+    font-weight: bold;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0;
+    gap: 8px;
+}
+
+
+.hero-text{
+    font-size: 48px;
+    color: #F9FAF8;
+    font-weight: 900;
+    margin: 0;
+}
+
+p{
+    color: gray
+}
+
+.hero-secondary-text{
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.quote{
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.button{
+    flex-grow: 0;
+    background-color: #3882F6;
+    border-radius: 0.5rem;
+    color: #F9FAF8;
+    padding: 4px 12px;
+    font-weight: 600;
+    border: 0;
+    font-size: 18px;
+}
+
+.footer{
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    color: #E5E7EB;
+    flex-shrink:  0;
+}
