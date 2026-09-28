@@ -13,7 +13,7 @@ body{
     flex: 1 0 auto;
 }
 
-.nav-bar, .hero-container, .plain-container, .gray-container{
+.nav-bar, .hero-container, .quote-container, .plain-container{
     margin: 0 48px;
 }
 
@@ -117,6 +117,13 @@ p{
     color: #1F2937;
     font-weight: 300;
     font-style: italic;
+    margin-bottom: 0;
+}
+
+.source{
+    font-weight: 600;
+    color:black;
+    align-self:flex-end;
 }
 
 .button{
