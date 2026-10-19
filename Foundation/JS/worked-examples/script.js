@@ -43,4 +43,22 @@ const borderedPink = document.querySelector(".borderedPink");
 borderedPink.style.backgroundColor = "pink";
 borderedPink.style.border = "solid black 10px";
 
+// DOM minuplation exercises from MDN
+const link = document.querySelector("a");
+link.textContent = "Mozilla Developer Network";
+link.href = "https://developer.mozilla.org";
+
+const sect = document.querySelector("section");
+const para2 = document.createElement("p");
+para2.textContent = "We hope you enjoyed the ride.";
+sect.appendChild(para2);
+
+const text = document.createTextNode(
+" - the premier source for web development knowledge.",
+);
+
+const linkPara = document.querySelector("p");
+linkPara.appendChild(text);
+
+
 
