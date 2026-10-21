@@ -9,10 +9,20 @@ function createGrid ( num ){
         div.classList.add("gridSquare");
         div.style.height = `${size}px`;
         div.style.width= `${size}px`;
+
+
+        // Randomizing colour
+        let red = Math.floor(Math.random() * 255);
+        let blue = Math.floor(Math.random() * 255);
+        let green = Math.floor(Math.random() * 255);
+
+        div.style.backgroundColor = `rgb(${red}, ${blue}, ${green})`; 
+        div.style.opacity = 0;
         container.appendChild(div);
 
         div.addEventListener("mouseenter", (e) => {
-            e.target.style.backgroundColor = "black";
+            const curOpacity = Number(e.target.style.opacity);
+            e.target.style.opacity = Math.min( curOpacity + 0.1, 1);
         });
     }
 }
