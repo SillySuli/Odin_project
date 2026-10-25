@@ -60,5 +60,61 @@ const text = document.createTextNode(
 const linkPara = document.querySelector("p");
 linkPara.appendChild(text);
 
+// Array Method exercises
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 29 };
+
+let arr = [ john, pete, mary ];
+
+let getAverageAge = (arr) =>{
+    
+    let sum = 0;
+    for ( let ob in arr){
+        sum += ob.age;
+    }
+    
+    return sum/3;
+}
+
+alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+
+
+let users = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+function groupById( users ){
+    
+    let userById = {};
+    for ( let items in users){
+        userById[items.id] = items;
+    }
+
+    return userById;
+}
+
+
+function groupById2( users ){
+    return users.reduce((obj, value) => {
+        obj[value.id] = value;
+        return obj;
+    }, {});
+}
+
+let usersById = groupById(users);
+
+/*
+// after the call we should have:
+
+usersById = {
+  john: {id: 'john', name: "John Smith", age: 20},
+  ann: {id: 'ann', name: "Ann Smith", age: 24},
+  pete: {id: 'pete', name: "Pete Peterson", age: 31},
+}
+*/
+
 
 
