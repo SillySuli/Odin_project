@@ -24,15 +24,27 @@ body{
     background-color: lightgoldenrodyellow;
     border: solid black 5px;
     height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    padding-left: 10px;
+    align-items: center;
+    font-family: 'Lucida Sans Typewriter', monospace;
+    font-size: 42px;
 }
 
 .button{
+    display: flex;
     background-color: black;
     color: white;
-    text-align:center;
     border: solid white 1px;
     padding: none;
+    align-items: center;
+    justify-content: center;
     flex: 1 1 0%;
+    font-size: 24px;
+    font-weight: 800px;
+    font-family: 'Lucida Console', monospace;
 }
 
 .buttonContainer ,.numberContainer, .operationContainer, .numberRow{
@@ -51,6 +63,10 @@ body{
 .numberContainer{
     flex: 3 1 0%;
     background-color: gray;
+}
+
+.numberRow{
+    flex: 1 1 0%;
 }
 
 .operationContainer{
