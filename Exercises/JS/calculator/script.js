@@ -7,9 +7,9 @@ const ADD= "\u002B"
 
 // Calculator object that keeps track of all calculations.
 let calculator = {
-    result : "2",
-    operator: DIVIDE,
-    operand: "0",
+    result : "0",
+    operator: undefined,
+    operand: undefined,
 }
 
 let clearFunction = () =>{
@@ -17,6 +17,15 @@ let clearFunction = () =>{
     calculator.operator = undefined;
     calculator.operand = undefined;
     console.log("History cleared");
+}
+
+function cleanCalculator(){
+    if (calculator.result == ""){
+        calculator.result = "0"}
+    if (calculator.operator == ""){
+        calculator.operator= undefined}
+    if (calculator.operand == ""){
+        calculator.operand = undefined}
 }
 
 function updateScreen() {
@@ -30,12 +39,14 @@ function updateScreen() {
 updateScreen();
 
 let buttonFunc = (e) => {
-    
+
+    let content = e.target.textContent;
+    console.log(content);
     // Handle all the operations
     if( e.target.dataset.value == "0"){
         if ( calculator.operand !== undefined ){
 
-            let res =operate();
+            let res = operate();
             if (!res){
                 setTimeout( () => {
                     clearFunction();
@@ -43,15 +54,52 @@ let buttonFunc = (e) => {
                 }, 2000);
                 return;
             }
-        console.log(e.target.textContent);
-        calculator.operator = e.target.textContent;
-        }
+        } 
+        calculator.operator = content;
 
     }else{
         // handle the rest.
         switch (e.target.id){
             case "clear":
                 clearFunction();
+                break;
+            case "equal":
+                if (!operate()){
+                    setTimeout( () => {
+                        clearFunction();
+                        updateScreen();
+                    }, 2000);
+                    return;
+                }
+                break;
+            case "backspace":
+                if ( calculator.operand !== undefined){
+                    calculator.operand = (calculator.operand).slice(0, -1);
+                } else if( calculator.operator !== undefined){
+                    calculator.operator = undefined;
+                } else {
+                    calculator.result = calculator.result.slice(0, -1);
+                }
+                cleanCalculator();
+                break;
+            default:
+                if (calculator.operator === undefined){
+                    if(calculator.result == "0"){
+                        calculator.result = content;
+                    } else {
+                        calculator.result += content;
+                    }
+
+                } else {
+
+                    if(calculator.operand === "0" || 
+                        calculator.operand === undefined){
+
+                        calculator.operand = content;
+                    } else {
+                        calculator.operand += content;
+                    }
+                }
                 break;
         }
     }
@@ -74,6 +122,10 @@ function operate(){
             // check for division by 0
             if( num2 == 0 ){
                 calculator.result = "Low IQ move";
+                setTimeout( () => {
+                    clearFunction();
+                    updateScreen();
+                }, 2000);
                 break;
             }
             calculator.result = (num / num2).toFixed(2);
@@ -102,9 +154,9 @@ function createButton( text , id, dataValue){
     button.id = id;
     button.textContent = text;
     button.dataset.value = dataValue;
-    
+
     button.addEventListener("click", buttonFunc );
-    
+
     return button;
 }
 
