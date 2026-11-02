@@ -41,7 +41,8 @@ body{
     padding: none;
     align-items: center;
     justify-content: center;
-    flex: 1 1 0%;
+    height: 80px;
+    flex: 1 0 0%;
     font-size: 24px;
     font-weight: 800px;
     font-family: 'Lucida Console', monospace;

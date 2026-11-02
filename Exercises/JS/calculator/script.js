@@ -42,6 +42,7 @@ let buttonFunc = (e) => {
 
     let content = e.target.textContent;
     console.log(content);
+    let equalPressed = false;
     // Handle all the operations
     if( e.target.dataset.value == "0"){
         if ( calculator.operand !== undefined ){
@@ -71,6 +72,7 @@ let buttonFunc = (e) => {
                     }, 2000);
                     return;
                 }
+                equalPressed = true;
                 break;
             case "backspace":
                 if ( calculator.operand !== undefined){
@@ -81,6 +83,19 @@ let buttonFunc = (e) => {
                     calculator.result = calculator.result.slice(0, -1);
                 }
                 cleanCalculator();
+                break;
+            case "decimal":
+                if (calculator.operator === undefined){
+                    if ( calculator.result.includes(".")){
+                        break
+                    }
+                    calculator.result += content;
+                } else {
+                    if ( calculator.operand.includes(".")){
+                        break
+                    }
+                    calculator.operand += content;
+                }
                 break;
             default:
                 if (calculator.operator === undefined){
@@ -104,6 +119,7 @@ let buttonFunc = (e) => {
         }
     }
     updateScreen();
+    if (equalPressed) clearFunction();
 }
 
 // fucntion that does the appropriate operation given 2 num and an operator.
@@ -180,7 +196,22 @@ operationBar.appendChild(addButton);
 
 let numberPad = document.querySelector(".numberContainer");
 
-function createRowAndAddButtons( ele1,id1, ele2, id2, ele3, id3){
+function createRowAndAdd2Buttons( ele1,id1, ele2, id2){
+
+    let row = document.createElement("div");
+    row.classList.add("numberRow");
+
+    let button1 = createButton(ele1, id1, "1");
+    button1.style.flex = "2 1 0%";
+    let button2 = createButton(ele2, id2, "1");
+
+    row.appendChild(button1);
+    row.appendChild(button2);
+
+    return row;
+}
+
+function createRowAndAdd3Buttons( ele1,id1, ele2, id2, ele3, id3){
 
     let row = document.createElement("div");
     row.classList.add("numberRow");
@@ -197,17 +228,17 @@ function createRowAndAddButtons( ele1,id1, ele2, id2, ele3, id3){
 }
 
 numberPad.appendChild(
-    createRowAndAddButtons("AC", "clear" , "%" , "modulo", "\u232B", "backspace")
+    createRowAndAdd2Buttons("AC", "clear" , "\u232B", "backspace")
 );
 numberPad.appendChild(
-    createRowAndAddButtons("1", "one", "2" , "two", "3", "three")
+    createRowAndAdd3Buttons("1", "one", "2" , "two", "3", "three")
 );
 numberPad.appendChild(
-    createRowAndAddButtons("4", "four", "5", "five", "6", "six")
+    createRowAndAdd3Buttons("4", "four", "5", "five", "6", "six")
 );
 numberPad.appendChild(
-    createRowAndAddButtons("7", "seven", "8", "eight", "9", "nine")
+    createRowAndAdd3Buttons("7", "seven", "8", "eight", "9", "nine")
 );
 numberPad.appendChild(
-    createRowAndAddButtons("0", "zero", ".", "decimal", "\u003D", "equal")
+    createRowAndAdd3Buttons("0", "zero", ".", "decimal", "\u003D", "equal")
 );
