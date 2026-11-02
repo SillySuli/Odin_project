@@ -173,6 +173,28 @@ function createButton( text , id, dataValue){
 
     button.addEventListener("click", buttonFunc );
 
+    document.addEventListener('keydown', (e) =>{
+        if (e.key === text){
+            button.click();
+        } else if (e.key === "Enter" && text == "\u003D"){
+            button.click();
+        } else if (e.key === "Backspace" && text == "\u232B"){
+            button.click();
+        } else if (e.key === "*" && text == MULTIPLY){
+            button.click();
+        } else if (e.key === "/" && text == DIVIDE){
+            button.click();
+        } else if (e.key === "+" && text == ADD){
+            button.click();
+        } else if (e.key === "-" && text == SUBTRACT){
+            button.click();
+        } else if (e.key === "." && text == "."){
+            button.click();
+        } else if (e.key === 'Escape' && text === "AC"){
+            button.click();
+        }
+    });
+
     return button;
 }
 
