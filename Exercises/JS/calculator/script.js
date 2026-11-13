@@ -131,7 +131,11 @@ function operate(){
     switch (calculator.operator){
         case MULTIPLY:
             let value = num * num2; 
-            calculator.result = String(value);
+            if(value%1 == 0){
+                calculator.result = String(value);
+            } else{
+                calculator.result = value.toFixed(2);
+            }
             success = 1;
             break;
         case DIVIDE:
