@@ -1,0 +1,30 @@
+@font-face{
+    font-family: "Norse";
+    src: url(media/norse-font/Norse.woff2) format(woff2);
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face{
+    font-family: "Norse";
+    src: url(media/norse-font/Norse.woff2) format(woff2);
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    display: flex;
+}
+
+.odin_header{
+    flex: 1 1 33vw;
+    position: relative;
+    background: center no-repeat url("./media/waterfall.jpg");
+}
+
+.form{
+    flex: 2 0 67vw;
+}
