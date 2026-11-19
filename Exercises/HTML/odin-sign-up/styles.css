@@ -1,3 +1,7 @@
+*:not(dialog){
+    margin: 0;
+}
+
 @font-face{
     font-family: "Norse";
     src: url(media/norse-font/Norse.woff2) format(woff2);
@@ -17,14 +21,17 @@
 
 body{
     display: flex;
+    min-height:100vh;
+    margin: 0 3vw;
 }
 
-.odin_header{
-    flex: 1 1 33vw;
+.odin-header{
+    flex: 1 1 40vw;
     position: relative;
-    background: center no-repeat url("./media/waterfall.jpg");
+    background:center url("./media/sunset.jpg");
+    background-size: cover;
 }
 
 .form{
-    flex: 2 0 67vw;
+    flex: 2 0 60vw;
 }
