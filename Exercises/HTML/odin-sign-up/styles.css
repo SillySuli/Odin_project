@@ -23,6 +23,7 @@ body{
     display: flex;
     min-height:100vh;
     margin: 0 3vw;
+    --white-txt: white;
 }
 
 .odin-header{
@@ -30,6 +31,15 @@ body{
     position: relative;
     background:center url("./media/sunset.jpg");
     background-size: cover;
+    color: var(--white-txt);
+}
+
+.odin-header .credits{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+    text-align: center;
 }
 
 .form{
