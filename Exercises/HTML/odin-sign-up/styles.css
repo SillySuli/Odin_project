@@ -24,6 +24,7 @@ body{
     background-color: whitesmoke;
     display: flex;
     min-height:100vh;
+    font-family: "Roboto", sans-serif;
     --white-txt: white;
     --left-margin: 36px;
     --right-margin: 40px; 
@@ -72,6 +73,7 @@ body{
     background-color:white;
     box-shadow: 4px 4px 4px lightgray;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 .quote{
@@ -130,7 +132,24 @@ body{
 
 label{
     font-size: 12px;
-    font-family: "Roboto", sans-serif;
     text-transform: uppercase;
 }
 
+button[type="submit"]{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: solid 2px transparent;
+    border-radius: 10px;
+    padding: 8px 22px;
+    font-family: inherit;
+    font-size: 24px;
+    color: white;
+    align-self: flex-start;
+    background: #C77B42;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+button[type="submit"]:hover{
+    border-color: black;
+}
