@@ -109,13 +109,23 @@ body{
     gap: 2px;
 }
 
-.form-element input{
-    border: solid 2px #E5E7EB;
+.form-element input[type="password"]{
+    border: solid 1px red;
+}
+.form-element input,
+.form-element input[type="password"]:user-valid{
+    border: solid 1px #E5E7EB;
     font-size: 16px;
     padding: 4px;
     border-radius: 5px;
     width: 15rem;
     height: 1rem;
+}
+
+
+.form-element input:focus{
+    border: solid 1px blue;
+    box-shadow: 2px 2px 2px lightgray;
 }
 
 label{
