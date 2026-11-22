@@ -78,6 +78,9 @@ body{
     font-family: "Roboto", sans-serif;
     font-weight: 600;
     font-size: 28px;
+}
+
+.side-margin{
     margin-left: var(--left-margin);
     margin-right: var(--right-margin);
 }
@@ -88,5 +91,36 @@ body{
 }
 
 .form-backdrop .quote {
+    font-size: 24px;
     font-weight: 500;
 }
+
+
+.form-row{
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 1rem;
+}
+
+.form-element{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2px;
+}
+
+.form-element input{
+    border: solid 2px #E5E7EB;
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 5px;
+    width: 15rem;
+    height: 1rem;
+}
+
+label{
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+}
+

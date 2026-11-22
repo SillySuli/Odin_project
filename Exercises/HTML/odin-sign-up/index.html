@@ -9,6 +9,7 @@
 
   <body>
     <div class="odin-header">
+
       <div class="black-transparent-container">
         <img  
           class="icon-image" 
@@ -19,16 +20,57 @@
         <p>ODIN</p>
       </div>
       <p class="credits">Photo by <u>Erin DeFuria</u> on <u>Unsplash</u>.</p>
+
     </div>
     <div class="form-container">
-      <p class="quote">This is not a real online service! You know you need something
+      <p class="quote side-margin">This is not a real online service! You know you need something
         like this in your life to help you realize your deepest dreams.
         <br>Sign up <i>now</i> to get started.</p>
-      <p class="quote margin">You <i>know</i> you want to</P>
+
+      <p class="quote margin side-margin">You <i>know</i> you want to</P>
 
       <div class= "form-backdrop">
-        <p class="quote margin">Let's do this</p>
-        <div>
+        <p class="quote margin side-margin">Let's do this!</p>
+
+        <form method="post" id="sign-up" class="side-margin">
+          <div class="form-row">
+            <div class="form-element">
+              <label for="first-name">First name</label>
+              <input id="first-name" name="first-name" type="text" required/>
+            </div>
+
+            <div class="form-element">
+              <label for="last-name">Last name</label>
+              <input id="last-name" name="last-name" type="text" required/>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-element">
+              <label for="email">email</label>
+              <input id="first-name" name="email" type="email" required/>
+            </div>
+
+            <div class="form-element">
+              <label for="phone-number">phone number</label>
+              <input id="phone-number" name="phone-number" type="tel" required/>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-element">
+              <label for="password">password</label>
+              <input id="password" name="password" type="password" required/>
+            </div>
+
+            <div class="form-element">
+              <label for="confirm-password">cofirm password</label>
+              <input id="confirm-password" name="confirm-password" type="password" required/>
+            </div>
+          </div>
+
+        </form>
+      </div>
     </div>
   </body>
 </html>
