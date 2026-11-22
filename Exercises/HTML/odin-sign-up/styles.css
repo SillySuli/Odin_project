@@ -24,9 +24,9 @@ body{
     background-color: whitesmoke;
     display: flex;
     min-height:100vh;
-    margin: 0 3vw;
     --white-txt: white;
-    --left-margin: 24px;
+    --left-margin: 36px;
+    --right-margin: 40px; 
 }
 
 .odin-header{
@@ -68,9 +68,25 @@ body{
     justify-content: center;
 }
 
+.form-backdrop{
+    background-color:white;
+    box-shadow: 4px 4px 4px lightgray;
+    width: 100%;
+}
+
 .quote{
     font-family: "Roboto", sans-serif;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 28px;
     margin-left: var(--left-margin);
+    margin-right: var(--right-margin);
+}
+
+.quote.margin{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-backdrop .quote {
+    font-weight: 500;
 }
