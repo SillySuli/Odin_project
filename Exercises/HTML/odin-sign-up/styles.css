@@ -153,3 +153,10 @@ button[type="submit"]{
 button[type="submit"]:hover{
     border-color: black;
 }
+
+a:link{
+    font-weight: bold;
+    text-decoration: none;
+    color: #c77B42;
+}
+
