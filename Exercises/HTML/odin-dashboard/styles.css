@@ -1,0 +1,13 @@
+.root-container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.sidebar{
+    background-color: deepskyblue;
+    grid-row: 1/-1;
+    grid-column: 1;
+}
