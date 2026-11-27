@@ -114,6 +114,12 @@ h2{
     align-items: center;
 }
 
+ul .sidebar-item:hover{
+    background-color: #5fd68a;
+    padding: 4px;
+    border-radius: 10px;
+}
+
 .header{
     grid-row: 1;
     grid-column: 2;
